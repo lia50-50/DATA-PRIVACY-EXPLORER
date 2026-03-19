@@ -111,6 +111,12 @@ Currently, if you ask a company to delete your data (GDPR/DPA), they delete it f
 We are seeing a global push (particularly in emerging tech hubs like the Philippines and India) to link social media accounts to government-verified SIM identities to curb "troll farms" and deepfake-driven scams.
 The "Wild West" of anonymity will end. Digital platforms will be legally required to anchor accounts to a Legal Identity (ID). While you may still use a pseudonym publicly, the state will have a "break-glass" protocol to link that handle to a physical person during criminal investigations.
 
+Group name: Ariado University 
+Members: 
+Merielle Grace C. Esplana
+Kimberlie Crissel F. Porteria
+Aliah T. Wales
+Section: BTVTED ICT CP 3A
 
 
 

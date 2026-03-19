@@ -474,3 +474,49 @@ body::before{
   .welcome-title{font-size:1.6rem}
   .scroll-btn{width:36px;height:36px;font-size:1rem}
 }
+
+.site-footer {
+  background: rgba(15, 12, 26, 0.95);
+  color: #e9d5ff;
+  padding: 40px 20px 20px;
+  border-top: 1px solid rgba(168, 85, 247, 0.3);
+  position: relative;
+  z-index: 10;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  text-align: center;
+}
+
+.footer-content h3 {
+  color: #c084fc;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 15px;
+}
+
+.footer-content p, .footer-content li {
+  font-size: 1rem;
+  opacity: 0.8;
+  list-style: none;
+  line-height: 1.6;
+}
+
+.footer-members ul {
+  padding: 0;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 20px;
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
