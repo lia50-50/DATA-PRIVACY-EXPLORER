@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore the evolution of privacy law — from the 1890 'Right to Privacy' article to GDPR and beyond. An interactive timeline featuring global and Philippine milestones." />
+  <title>Privacy Law Timeline — From 1890 to the Future</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== Particle Canvas (Background) ===== -->
+  <canvas id="particles" style="position:fixed;inset:0;z-index:0;pointer-events:none"></canvas>
+
+  <!-- ===== Top Navigation (hidden on welcome) ===== -->
+  <nav class="top-nav nav-hidden" aria-label="Main navigation">
+    <span class="nav-brand">DATA PRIVACY EXPLORER</span>
+    <div class="nav-links">
+      <button data-section="timeline" class="active">Timeline</button>
+      <button data-section="predictions">What's Next?</button>
+      <button data-section="welcome">Home</button>
+    </div>
+  </nav>
+
+  <!-- ===== 1. WELCOME PAGE ===== -->
+  <section id="welcome" class="section">
+    <div class="welcome-shield animate-in">
+      <svg viewBox="0 0 100 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="shieldGrad" x1="0" y1="0" x2="100" y2="120" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#c084fc"/>
+            <stop offset="100%" stop-color="#7c3aed"/>
+          </linearGradient>
+        </defs>
+        <path d="M50 5 L95 25 L95 60 C95 90 50 115 50 115 C50 115 5 90 5 60 L5 25 Z"
+              fill="url(#shieldGrad)" opacity="0.18" stroke="#a855f7" stroke-width="2.5"/>
+        <path d="M50 5 L95 25 L95 60 C95 90 50 115 50 115 C50 115 5 90 5 60 L5 25 Z"
+              fill="none" stroke="#c084fc" stroke-width="1" opacity="0.5"/>
+        <!-- Lock icon -->
+        <rect x="37" y="52" width="26" height="22" rx="4" fill="#a855f7" opacity="0.7"/>
+        <rect x="37" y="52" width="26" height="22" rx="4" fill="none" stroke="#e9d5ff" stroke-width="1.5"/>
+        <path d="M42 52 V44 C42 37 50 32 50 32 C50 32 58 37 58 44 V52" fill="none" stroke="#e9d5ff" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="50" cy="62" r="3" fill="#e9d5ff"/>
+        <line x1="50" y1="65" x2="50" y2="69" stroke="#e9d5ff" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <h1 class="welcome-title animate-in delay-1">DATA PRIVACY EXPLORER</h1>
+    <p class="welcome-subtitle animate-in delay-2">
+      Trace the evolution of privacy rights — from the first legal argument in 1890 to the global data protection frameworks of today. Featuring both worldwide and Philippine milestones.
+    </p>
+    <button id="btn-explore" class="btn-primary animate-in delay-3">
+      Explore the Timeline <span class="arrow">→</span>
+    </button>
+  </section>
+
+  <!-- ===== 2. TIMELINE PAGE ===== -->
+  <section id="timeline-section" class="section hidden">
+    <h2 class="timeline-heading animate-in">📜 Major Privacy Law Milestones</h2>
+
+    <div class="timeline-wrapper">
+      <div class="timeline-line"></div>
+      <button class="scroll-btn left" id="scroll-left" aria-label="Scroll left">◀</button>
+      <div class="timeline-track" id="timeline-track">
+        <!-- Cards injected by JS -->
+      </div>
+      <button class="scroll-btn right" id="scroll-right" aria-label="Scroll right">▶</button>
+    </div>
+  </section>
+
+  <!-- ===== 3. FUTURE PREDICTIONS PAGE ===== -->
+  <section id="predictions" class="section hidden">
+    <h2 class="timeline-heading animate-in">🔮 What's Next in Privacy?</h2>
+    <p class="timeline-subheading animate-in delay-1">Our predictions for the future of data protection</p>
+    <div class="predictions-grid" id="predictions-grid">
+      <!-- Cards injected by JS -->
+    </div>
+  </section>
+
+  <!-- ===== MODAL (Shared) ===== -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-box">
+      <div class="modal-header">
+        <span class="modal-title" id="modal-title"></span>
+        <button class="modal-close" id="modal-close" aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
